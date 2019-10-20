@@ -28,7 +28,7 @@ Maintain disjoint sets (such as the cc of a graph). Each set is a Graph cc.
     1. Update u’s pointer to point to v
     2. Not update the pointers at the other nodes of set B.
     
-![Union example](https://github.com/MrRobb/SO-FIB/blob/master/Utilidades/img%20resum/img4.png)
+![Union example](sources/img/img1.jpg)
 
 > **Important** Keep the name of the larger set as the name of the union
 > - To do it efficiently: additional field with the nodes --> the size of the corresponding set.
@@ -38,7 +38,7 @@ Maintain disjoint sets (such as the cc of a graph). Each set is a Graph cc.
 #### Union-Find data strucutre (future improvments)
 Main idea of what we can do in order to increase the optimitzation:
 
-![Union example](https://github.com/MrRobb/SO-FIB/blob/master/Utilidades/img%20resum/img4.png)
+![Union example](sources/img/img2.jpg)
 
 - Find(u): after finding that u ∈ A (and A cc is named by node x) we can point all the nodes to x as in the image. Cost can be higger, as since after finding the name x of the set containing v, we have to go back through the same path of pointers from v to x, and reset each of these pointers to point to x directly. The real gain from compression is in making subsequent calls to Find cheaper; bounding the total time for a sequence of n Find operations, rather than the worst-case time for any one of them.
 
